@@ -231,16 +231,16 @@ function __wbg_adapter_28(arg0, arg1, arg2) {
 /**
 * @returns {Promise<void>}
 */
-export function worker_entry() {
-    const ret = wasm.worker_entry();
+export function main_entry() {
+    const ret = wasm.main_entry();
     return takeObject(ret);
 }
 
 /**
 * @returns {Promise<void>}
 */
-export function main_entry() {
-    const ret = wasm.main_entry();
+export function worker_entry() {
+    const ret = wasm.worker_entry();
     return takeObject(ret);
 }
 
@@ -896,16 +896,16 @@ function getImports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper265 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 61, __wbg_adapter_22);
+    imports.wbg.__wbindgen_closure_wrapper257 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 60, __wbg_adapter_22);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2928 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 870, __wbg_adapter_25);
+    imports.wbg.__wbindgen_closure_wrapper2926 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 869, __wbg_adapter_25);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2957 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 887, __wbg_adapter_28);
+    imports.wbg.__wbindgen_closure_wrapper2955 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 886, __wbg_adapter_28);
         return addHeapObject(ret);
     };
 
