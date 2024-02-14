@@ -3,18 +3,18 @@
 /**
 * @returns {Promise<void>}
 */
-export function worker_entry(): Promise<void>;
+export function main_entry(): Promise<void>;
 /**
 * @returns {Promise<void>}
 */
-export function main_entry(): Promise<void>;
+export function worker_entry(): Promise<void>;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly worker_entry: () => number;
   readonly main_entry: () => number;
+  readonly worker_entry: () => number;
   readonly __wbindgen_malloc: (a: number, b: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
